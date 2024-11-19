@@ -1,0 +1,41 @@
+@media (max-width: 749px) {
+  .main-product-section {
+    padding-top: 0 !important;
+  }
+  .product__media-wrapper .slider.slider--mobile {
+    scroll-padding-left: 0;
+  }
+  .product__media-wrapper .product__media-list .product__media-item {
+    width: 100%;
+    padding-top: 0 !important;
+    margin-left: 0 !important;
+  }
+  .product__media-wrapper .product__media-list .product__media-item img {
+    border-radius: 0;
+  }
+  .product__media-wrapper .thumbnail-list {
+    justify-content: center;
+  }
+  .product__media-wrapper .thumbnail-slider .slider-button {
+    display: none;
+  }
+  .product__media-wrapper .thumbnail-list .thumbnail-list__item {
+    width: 10px !important;
+    height: 10px !important;
+    overflow: hidden;
+  }
+  .product__media-wrapper .thumbnail-list .thumbnail-list__item .thumbnail {
+    background: #e8e8e8;
+  }
+  .product__media-wrapper
+    .thumbnail-list
+    .thumbnail-list__item
+    .thumbnail[aria-current] {
+    box-shadow: none;
+    background: #000;
+  }
+  .product__media-wrapper .thumbnail-list .thumbnail-list__item .thumbnail img {
+    display: none;
+  }
+}
+/*# sourceMappingURL=/cdn/shop/t/6/assets/mirzag_01.css.map?v=51821007862682275791700902212 */
