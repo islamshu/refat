@@ -55,7 +55,7 @@
                                                         <label for="userinput2">{{ __('النص المتحرك') }}</label>
 
                                                         
-                                                            <textarea class="form-control ckeditor" name="general[slider_text]" id="" cols="30" rows="10">{{ get_general_value('slider_text') }}</textarea>
+                                                            <textarea class="form-control " name="general[slider_text]" id="" cols="30" rows="10">{{ get_general_value('slider_text') }}</textarea>
                                                         <div class="invalid-feedback">
                                                         </div>
                                                     </div>

@@ -97,7 +97,22 @@
                        
                     </ul>
                 </li>
-                
+                <li class="dropdown nav-item" data-menu="dropdown"><a class="dropdown-toggle nav-link"
+                        href="#" data-toggle="dropdown"><i
+                            class="la la-television"></i><span>{{ __('الاسئلة الشائعة') }}</span></a>
+                    <ul class="dropdown-menu">
+                        <li class="dropdown " data-menu=""><a
+                                class="dropdown-item " href="{{ route('faqs.index') }}"
+                                >{{ __('جميع الاسئلة ') }}</a>
+                        </li>
+                        <li class="dropdown " data-menu=""><a
+                                class="dropdown-item " href="{{ route('faqs.create') }}"
+                                >{{ __('اضف سؤال جديد') }}</a>
+                        </li>
+                       
+                       
+                    </ul>
+                </li>
                 {{-- <li class="dropdown nav-item" data-menu="dropdown"><a class="dropdown-toggle nav-link"
                         href="#" data-toggle="dropdown"><i
                             class="la la-folder-open"></i><span>General</span></a>

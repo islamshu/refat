@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\FAQController;
 use App\Http\Controllers\GalleryController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\PartnerController;
@@ -52,6 +53,7 @@ Route::resource('galleries',GalleryController::class);
 Route::resource('partners',PartnerController::class);
 Route::resource('videos',VideoController::class);
 Route::resource('reviews',ReviewController::class);
+Route::resource('faqs', FAQController::class);
 
 
 

@@ -14,9 +14,15 @@
                     <div class="card-body">
                         @include('dashboard.inc.alerts')
 
-                        <form action="{{ route('reviews.update', $review->id) }}" method="POST">
+                        <form action="{{ route('reviews.update', $review->id) }}" method="POST" enctype="multipart/form-data">
                             @csrf
                             @method('PUT')
+                            <div class="form-group">
+                                <label for="image">الصورة</label>
+                                <input type="file" class="form-control" id="image" name="image" accept="image/*">
+                                <img src="{{asset('uploads/'.$review->image)}}" width="60" height="60" alt="">
+                            </div>
+                            
                             <div class="form-group">
                                 <label for="name">{{ __('الاسم') }}</label>
                                 <input type="text" name="name" id="name" class="form-control" value="{{ $review->name }}" required>

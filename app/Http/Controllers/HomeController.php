@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\FAQ;
 use App\Models\Gallery;
 use App\Models\GeneralInfo;
 use App\Models\Partner;
@@ -23,7 +24,8 @@ class HomeController extends Controller
         $partners = Partner::orderby('id', 'desc')->get();
         $videos = Video::orderby('id', 'desc')->get();
         $reviews = Review::orderby('id', 'desc')->get();
-        return view("layouts.frontend", compact("product", "gallers", "partners", "videos", "reviews"));
+        $faqs =     FAQ::orderby('id','desc')->get();
+        return view("layouts.frontend", compact("product", "gallers", "partners", "videos", "reviews","faqs"));
     }
     public function checkout()
     {

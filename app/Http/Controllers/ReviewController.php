@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Review;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 
 class ReviewController extends Controller
 {
@@ -29,8 +30,14 @@ class ReviewController extends Controller
             'star' => 'required|integer|min:1|max:5',
             'text' => 'required|string',
         ]);
+        $data = $request->all();
 
-        Review::create($request->all());
+        if ($request->hasFile('image')) {
+            $imagePath = $request->file('image')->store('reviews');
+            $data['image'] = $imagePath;
+        }
+    
+        Review::create($data);
 
         return redirect()->route('reviews.index')->with('success', 'تمت إضافة التقييم بنجاح.');
     }
@@ -49,10 +56,23 @@ class ReviewController extends Controller
             'date' => 'required|date',
             'star' => 'required|integer|min:1|max:5',
             'text' => 'required|string',
+
         ]);
 
-        $review->update($request->all());
+        $data = $request->all();
 
+        if ($request->hasFile('image')) {
+            // Delete old image if exists
+            if ($review->image && \Storage::exists('public/' . $review->image)) {
+                \Storage::delete('public/' . $review->image);
+            }
+    
+            $imagePath = $request->file('image')->store('reviews');
+            $data['image'] = $imagePath;
+        }
+    
+        $review->update($data);
+    
         return redirect()->route('reviews.index')->with('success', 'تم تعديل التقييم بنجاح.');
     }
 

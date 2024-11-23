@@ -112,7 +112,7 @@ if (this.files && this.files[0]) {
 
     
 </script>
-<script src="https://cdn.ckeditor.com/4.16.0/standard/ckeditor.js"></script>
+<script src="https://cdn.ckeditor.com/4.21.0/full/ckeditor.js"></script>
     <script>
         // Initialize CKEditor for all textareas with the class 'ckeditor'
         document.addEventListener('DOMContentLoaded', function () {
@@ -130,6 +130,11 @@ if (this.files && this.files[0]) {
                         { name: 'colors' },
                         { name: 'tools' },
                     ],
+                    contentsLangDirection: 'rtl',
+                    extraPlugins: 'font',
+                    font_names: 'Arial/Arial, Helvetica, sans-serif;' +
+                    'Amiri/Amiri, serif;' +
+                    'Tahoma/Tahoma, Geneva, sans-serif;',
                 });
             });
         });
