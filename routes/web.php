@@ -46,6 +46,8 @@ Route::get('telegran_setting', [HomeController::class, 'telegran_setting'])->nam
 
 
 Route::get('another_setting', [HomeController::class, 'another_setting'])->name('another_setting');
+Route::get('edit_section', [HomeController::class, 'edit_section'])->name('edit_section');
+
 
 Route::post('add_general', [HomeController::class, 'add_general'])->name('add_general');
 Route::resource('products',ProductController::class);

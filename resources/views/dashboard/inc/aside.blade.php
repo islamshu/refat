@@ -49,6 +49,13 @@
                        
                     </ul>
                 </li>
+                <li class=" nav-item" ><a class=" nav-link"
+                        href="{{route('edit_section')}}" ><i
+                            class="la la-television"></i><span>{{ __('تعديل القسم اسفل الفيديو') }}</span></a>
+                 
+                </li>
+
+                
                 <li class="dropdown nav-item" data-menu="dropdown"><a class="dropdown-toggle nav-link"
                         href="#" data-toggle="dropdown"><i
                             class="la la-television"></i><span>{{ __('الشركاء') }}</span></a>

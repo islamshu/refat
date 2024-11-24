@@ -3932,11 +3932,10 @@ calc((1200px - 220px) * 1 /  4),
                     <div
                         class="banner__box content-container content-container--full-width-mobile color-background-2 gradient">
                         <h2 class="banner__heading inline-richtext h1">
-                            Buy One Pillow, Get A FREE Mini Knee Pillow
+                            {!! get_general_value('section_title') !!}
                         </h2>
                         <div class="banner__text rte body">
                             <p>
-                                Save 30% + we’ll include a FREE Mini Knee Pillow in your checkout!
                             </p>
                         </div>
                         <div class="banner__buttons">

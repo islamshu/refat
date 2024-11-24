@@ -282,7 +282,12 @@ public function send_code(Request $request)
     {
         return view('dashboard.another_setting');
     }
+    public function edit_section()
+    {
+        return view('dashboard.edit_section');
+    }
 
+    
     public function add_general(Request $request)
     {
         // dd($request);

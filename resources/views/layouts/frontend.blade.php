@@ -3923,7 +3923,7 @@ calc((1200px - 220px) * 1 /  4),
                 id="Banner-template--21693237952819__03ab414d-589e-4717-b13f-c1fe407a8f05">
                 <div class="banner__media media scroll-trigger animate--fade-in">
                     <img alt="" fetchpriority="auto" height="600.0" loading="lazy" sizes="100vw"
-                        src="{{ asset('frontend/images/8.png') }}"
+                        src="{{ asset('uploads/'.get_general_value('back_groub_section')) }}"
                         width="1080" />
                 </div>
                 <div
@@ -3931,17 +3931,17 @@ calc((1200px - 220px) * 1 /  4),
                     <div
                         class="banner__box content-container content-container--full-width-mobile color-background-2 gradient">
                         <h2 class="banner__heading inline-richtext h1">
-                            Buy One Pillow, Get A FREE Mini Knee Pillow
+                            {!! get_general_value('title_section') !!}
                         </h2>
                         <div class="banner__text rte body">
                             <p>
-                                Save 30% + we’ll include a FREE Mini Knee Pillow in your checkout!
+                                {!! get_general_value('description_section') !!}
                             </p>
                         </div>
                         <div class="banner__buttons">
                             <a class="button button--primary"
-                                href="https://b206f0-2.myshopify.com/cart/47271603634483:1?channel=buy_button">
-                                TRY YOURS NOW 👉
+                                href="{{get_general_value('title_url')}}">
+                                {{get_general_value('title_button')}}
                             </a>
                         </div>
                     </div>
